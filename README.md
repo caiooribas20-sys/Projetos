@@ -27,3 +27,5 @@ Pedido em linguagem natural → fonte oficial (Banco Mundial, BCB, SICONFI, DATA
 ---
 
 **Ferramentas:** Power BI (DAX, Star Schema) · SQL/PostgreSQL · Python (pandas) · R · TypeScript · n8n · Supabase
+
+**Contato:** [LinkedIn](https://www.linkedin.com/in/caio-ribas-dados) · [Instagram @ribas.analytics](https://www.instagram.com/ribas.analytics)
