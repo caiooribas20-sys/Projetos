@@ -16,8 +16,12 @@ Pesquisas de eficiência municipal (DEA/Malmquist) dependem de dezenas de bases 
 
 Hoje a plataforma roda com dois workspaces isolados:
 
-- **TCC — Inflação** (`tcc_macro`): 1.051 registros reais de inflação, câmbio, PIB e juros de Brasil, Chile, Colômbia, México e Peru (2000–2026), coletados do **Banco Mundial (WDI)** e do **BCB/SGS** por um workflow n8n, com URL de origem, hash do bruto e regras de validação gravados em cada linha. É a base do meu TCC sobre câmbio, crescimento e inflação na América Latina.
-- **Eficiência Pública PE** (`eficiencia_pe`): conectores SICONFI, DATASUS/SISVAN, INEP e SI-PNI para o artigo sobre eficiência dos municípios pernambucanos na primeira infância.
+- **TCC — Inflação** (`tcc_macro`): 1.039 registros reais de inflação, câmbio, PIB e juros de Brasil, Chile, Colômbia, México e Peru (2000–2026), coletados do **Banco Mundial (WDI)** e do **BCB/SGS** por um workflow n8n, com URL de origem, hash do bruto e regras de validação gravados em cada linha. É a base do meu TCC sobre câmbio, crescimento e inflação na América Latina.
+- **Eficiência Pública PE** (`eficiencia_pe`): conectores SICONFI, DATASUS/SISVAN, INEP e SI-PNI para o artigo sobre eficiência dos municípios pernambucanos na primeira infância — **em construção**: a coleta real ainda está em andamento, por isso esse workspace não exibe dados ao público.
+
+## Dados de demonstração
+
+A pasta [`dados-demo/`](dados-demo/) traz uma amostra real da camada Silver: **1.039 registros** de inflação, juros, câmbio e PIB de Brasil, Chile, Colômbia, México e Peru (2000–2026), com URL de origem e hash SHA-256 em cada linha. Dá para abrir direto no pandas, no R ou no Power BI.
 
 ## Arquitetura
 
@@ -49,7 +53,7 @@ Hoje a plataforma roda com dois workspaces isolados:
 
 ## Telas
 
-| Silver — 1.051 registros com contrato aplicado | Gold — agregação executada no PostgreSQL |
+| Silver — 1.039 registros com contrato aplicado | Gold — agregação executada no PostgreSQL |
 |---|---|
 | ![Silver](docs/prints/02-base-silver.png) | ![Gold](docs/prints/06-gold.png) |
 | **Analytics (Canvas)** | **Entidades & Categorias** |
@@ -66,7 +70,7 @@ O código-fonte (TanStack Start + Supabase) é desenvolvido no Lovable e será e
 ```bash
 bun install        # ou npm install
 bun run dev        # ou npm run dev
-bun test           # 42 testes sem rede (parser, contrato, paginação, query-spec, gold)
+bun test           # 90 testes sem rede (parser, contrato, resolvedor de fontes, deduplicação, query-spec, gold)
 ```
 
 Variáveis de ambiente do servidor (extração real):
@@ -90,9 +94,10 @@ Sem as chaves, o Extrator roda em **modo demonstração** (amostra sintética, n
 | 3 | Painel de observabilidade por workspace | ✅ implementado |
 | 4 | Leitura completa paginada + exportação integral | ✅ |
 | 5 | Extração em etapas, lote por categorias, Text-to-SQL, Gold | ✅ implementado |
-| — | Validação ponta a ponta com chaves reais | 🔄 em andamento |
+| — | Validação ponta a ponta com chaves reais (extração por URL oficial → prévia → confirmação → gravação) | ✅ validada em 14/11/2026 |
+| — | Resolvedor de fontes sem URL, aviso de duplicatas e sessão persistente | 🔄 em andamento |
 
 ## Autor
 
 **Caio Ribas** — Economia (UFPE) · Dados, BI e DataOps aplicados ao setor público
-[GitHub](https://github.com/caiooribas20-sys) · [← voltar à vitrine](../README.md)
+[LinkedIn](https://www.linkedin.com/in/caio-ribas-dados) · [GitHub](https://github.com/caiooribas20-sys) · [Instagram @ribas.analytics](https://www.instagram.com/ribas.analytics) · [← voltar à vitrine](../README.md)
