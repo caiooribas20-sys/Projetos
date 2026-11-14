@@ -100,4 +100,4 @@ Sem as chaves, o Extrator roda em **modo demonstração** (amostra sintética, n
 ## Autor
 
 **Caio Ribas** — Economia (UFPE) · Dados, BI e DataOps aplicados ao setor público
-[GitHub](https://github.com/caiooribas20-sys) · [← voltar à vitrine](../README.md)
+[LinkedIn](https://www.linkedin.com/in/caio-ribas-dados) · [GitHub](https://github.com/caiooribas20-sys) · [Instagram @ribas.analytics](https://www.instagram.com/ribas.analytics) · [← voltar à vitrine](../README.md)
