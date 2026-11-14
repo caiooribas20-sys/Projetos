@@ -19,6 +19,10 @@ Hoje a plataforma roda com dois workspaces isolados:
 - **TCC — Inflação** (`tcc_macro`): 1.051 registros reais de inflação, câmbio, PIB e juros de Brasil, Chile, Colômbia, México e Peru (2000–2026), coletados do **Banco Mundial (WDI)** e do **BCB/SGS** por um workflow n8n, com URL de origem, hash do bruto e regras de validação gravados em cada linha. É a base do meu TCC sobre câmbio, crescimento e inflação na América Latina.
 - **Eficiência Pública PE** (`eficiencia_pe`): conectores SICONFI, DATASUS/SISVAN, INEP e SI-PNI para o artigo sobre eficiência dos municípios pernambucanos na primeira infância.
 
+## Dados de demonstração
+
+A pasta [`dados-demo/`](dados-demo/) traz uma amostra real da camada Silver: **1.039 registros** de inflação, juros, câmbio e PIB de Brasil, Chile, Colômbia, México e Peru (2000–2026), com URL de origem e hash SHA-256 em cada linha. Dá para abrir direto no pandas, no R ou no Power BI.
+
 ## Arquitetura
 
 ![Arquitetura](docs/arquitetura.svg)
@@ -90,7 +94,8 @@ Sem as chaves, o Extrator roda em **modo demonstração** (amostra sintética, n
 | 3 | Painel de observabilidade por workspace | ✅ implementado |
 | 4 | Leitura completa paginada + exportação integral | ✅ |
 | 5 | Extração em etapas, lote por categorias, Text-to-SQL, Gold | ✅ implementado |
-| — | Validação ponta a ponta com chaves reais | 🔄 em andamento |
+| — | Validação ponta a ponta com chaves reais (extração por URL oficial → prévia → confirmação → gravação) | ✅ validada em 14/11/2026 |
+| — | Resolvedor de fontes sem URL, aviso de duplicatas e sessão persistente | 🔄 em andamento |
 
 ## Autor
 

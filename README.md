@@ -12,7 +12,7 @@ Economia (UFPE) · Analista na contabilidade da Secretaria da Fazenda de Caruaru
 
 Pedido em linguagem natural → fonte oficial (Banco Mundial, BCB, SICONFI, DATASUS, INEP) → prévia validada → camadas **Bronze / Silver / Gold** no PostgreSQL. Hoje com 1.051 registros reais de inflação, câmbio, PIB e juros de 5 países da América Latina, coletados via n8n com proveniência e hash em cada linha.
 
-`TypeScript` `PostgreSQL` `Supabase` `RLS` `Groq` `n8n` · **[ver projeto →](extrator-universal/README.md)** · **[demo ao vivo](https://datahub-eficiencia-pe.lovable.app)**
+`TypeScript` `PostgreSQL` `Supabase` `RLS` `Groq` `n8n` · **[ver projeto →](extrator-universal/README.md)** · **[demo ao vivo](https://datahub-eficiencia-pe.lovable.app)** · **[dados de exemplo (CSV)](extrator-universal/dados-demo/)**
 
 ---
 
